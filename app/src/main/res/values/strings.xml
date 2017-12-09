@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SportManagement</string>
+    <string name="title_activity_sport">SportActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
+</resources>

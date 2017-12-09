@@ -22,7 +22,7 @@ import java.util.List;
 #classes, puis affichage et      #
 #sélection                       #
 #                                #
-#Auteur : Gabin,                  #
+#Auteur : Gabin,                   #
 ##################################
 
 */

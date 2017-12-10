@@ -1,6 +1,7 @@
 package com.example.cornug.sportmanagement;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -28,7 +29,7 @@ import java.util.List;
 
 public class SportActivity extends AppCompatActivity implements AsyncResponse {
 
-    String ip="http://172.20.10.3:8888/tut.php?sql=";
+    String ip="http://projetut.pe.hu/tut.php?sql=";
     RadioGroup rg;
     String classe;
     SharedPreferences preferences;
@@ -77,6 +78,8 @@ public class SportActivity extends AppCompatActivity implements AsyncResponse {
                 public void onClick(View v) {
                     editor.putString("sport", ((Button) v).getText().toString());
                     editor.apply();
+                    Intent displayActivity = new Intent(context, TypeEval.class);
+                    context.startActivity(displayActivity);
 
 
                 }

@@ -29,7 +29,7 @@ import java.util.List;
 
 public class ChoixActivity extends AppCompatActivity implements AsyncResponse {
     //IP à changer en fonction de l'endroit
-    String ip="http://172.20.10.3:8888/tut.php?sql=";
+    String ip="http://projetut.pe.hu/tut.php?sql=";
     RadioGroup listSport, listClasse;
     List<String> listeString;
     Context context = this;
@@ -68,7 +68,7 @@ public class ChoixActivity extends AppCompatActivity implements AsyncResponse {
         //Création de la tâche Asynchrone qui va récupérer la liste des noms de classe
         JSONTask recupClasse = new JSONTask("nom_classe");
         recupClasse.delegate = this;
-        recupClasse.execute(ip+"SELECT%20nom_classe%20FROM%20classe");
+        recupClasse.execute(ip+"SELECT%20nom_classe%20FROM%20CLASSE%20ORDER%20BY%20id_classe%20asc");
 
         int i = 0;
 

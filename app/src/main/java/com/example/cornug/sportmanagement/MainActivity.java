@@ -37,7 +37,7 @@ import java.util.List;
 */
 
 public class MainActivity extends AppCompatActivity{
-    String ip="http://172.20.10.3:8888/tut.php?sql=";
+    String ip="http://projetut.pe.hu/tut.php?sql=";
     EditText username,password;
     Context context;
     String dataParsed="",res="",compareString;
@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 //On place en $_GET la requête SQL
-                new JSONTask().execute(ip+"SELECT%20*%20FROM%20PROF");
+                new JSONTask().execute(ip+"SELECT%20*%20FROM%20PROFESSEUR");
             }
         });
 
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity{
                 //la valeur d'une colonne, le for parcourt toutes les colonnes
                 for(int i = 0 ;i <JA.length(); i++){
                     JSONObject JO = (JSONObject) JA.get(i);
-                    singleParsed =  JO.get("Id_prof") +""+JO.get("mdp_prof");
+                    singleParsed =  JO.get("nom_prof") +""+JO.get("mdp_prof");
                     Log.e("",singleParsed);
                     listeString.add(singleParsed);
 

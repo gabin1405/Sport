@@ -26,6 +26,9 @@
         <activity
             android:name=".SportActivity"
             android:screenOrientation="landscape" />
+        <activity android:name=".TypeEval" />
+        <activity android:name=".SelectionEleve" />
+        <activity android:name=".EvalInd"></activity>
     </application>
 
 </manifest>
